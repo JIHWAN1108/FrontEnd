@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HypherText(HypherLink)</title>
+    <style>
+        /* html 태그는 컨텐츠의 의미와 구조를 표시, html 문서의 모양(디자인요소)은 style 여러 속성으로 설정 */
+        html{   /* html 태그에 적용되는 디자인 속성*/
+            margin: 0px; padding: 0px;
+        }
+        body{   /* body 태그에 적용되는 디자인 속성*/
+            margin: 0px; padding: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <!-- 웹문서 사이의 연결(링크) a(anchor : 닻)태그 -->
+    구글 사이트로 이동하기 : <a href="https://www.google.co.kr">Google</a>  <!-- (빨간색은 속성이름)href는 링크될 문서의 주소 (1) 도메인 네임 -->
+    <br>    <!-- a태그 뒤엔 줄바꿈이 안되기 때문에 br태그로 줄바꿈 -->
+    네이버 사이트로 이동하기 : <a href="https://www.naver.com" target="black">Naver</a>  <!-- target = "black" 새 탭으로 열기 -->
+    <br>
+    <b>같은 폴더위치의 파일 이동 : ✔🤍</b><a href = "mytest.html" target="black">mytest.html 보여주기🤍✔</a>
+    <!-- 하나의 웹문서 내용이 화면을 벗어날때는 같은 문서의 특정 위치로 이동할 수 있다  -->
+    <br><a href="#">이동 동작 없음</a>
+    <hr>
+    <!-- 이미지 포함 시키기 = img태그. 종료태그 없음 -->
+    <!-- <img src="images/image1.jpg" width="30%"> -->      <!-- images 폴더가 day1 폴더 아래 있을 때다. 이미지 표시 안됨 -->
+    <img src="../images/image1.jpg" width="32.93%">   
+    <img src="../images/image2.jpg" width="33%">    <!-- 이렇게 ../ 는 한단계 상위폴더로 이동이기 때문에 이거를 해야 이미지가 보인다. -->
+    <img src="../images/image3.jpg" width="33%">    <!-- width = ?% == 윈도우 크기의 ?% -->
+     <!-- "../" 는 한단계 상위폴더로 이동이기 때문에 'FRONTEND 로 이동'하고 거기서 'IMAGES 폴더로 이동하라' 라는 뜻임. -->
+
+   <!-- <img src="images/image1.jpg" width="50%"> -->  
+    <img src="../images/image1.jpg" width="50%">      
+    <img src="../images/image2.jpg" width="50%">    
+    <img src="../images/image3.jpg" width="50%">   
+
+    <!-- 만약 이미지 너비를 40%로 하면 2개 80으로 같은 라인으로 배치. 하나는 다음 라인에 배치 
+        그러나 이미지 너비 50%일 때엔 합하면 100이 아니라 왼쪽에 작은 여백이 있어서 100을 넘겨 
+        모두 다른라인에 표시가 된다.
+    -->
+
+    <hr> <!-- 줄긋기 -->
+    <!-- div태그로 이미지가 다른 라인에 표시가 된다. -->
+    <div> <img src="../images/image1.jpg" width="30%"> </div>
+    <div> <img src="../images/image2.jpg" width="30%"> </div>
+    <div> <img src="../images/image3.jpg" width="30%"> </div>
+    <!-- img 태그는 원래 inline태그 요소인데 div 태그 안에 넣었으니 block 태그 성격을 가짐 -->
+
+    <!-- 이미지에 a태그 적용하기 (실행하면 네이버로 이동하기 후 이미지 나오고 이미지 클릭하면 naver하이퍼링크가 연결되어 새 창에서 네이버가 열림)-->
+    네이버로 이동하기 <a href="https://www.naver.com" target="black"><img src="../images/image1.jpg" width="30"></a>
+</body>
+</html>
