@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day2-07 iframe</title>
+</head>
+<body>
+    <!-- inline frame 의 약자 : 현재 문서에 다른 html 문서를 포함시킨다. -->
+    <!-- src에 포함시킬 문서를 지정한다. url(파일, 도메인 네임...) -->
+    <iframe src="use_idselector.html" frameborder="0"
+    style="width : 100%; height: 400px"></iframe>
+    <!-- iframe height는 %가 부모기준, 부모 body가 height 설정되지 않은 상태라 %를 붙이면 설정 안됨 -->
+
+    <!-- http:// ~주소 url 포함도 가능하다. -->
+    <!-- 보안상의 이유로 DENY되는 URL들이 있다. EX) NAVER -->
+    <iframe src="https://www.naver.com" frameborder="0"
+    style="width : 100%; height: 400px"></iframe>
+    <!-- w3schools -->
+    <iframe src="https://www.w3schools.com/html/html_table_headers.asp" frameborder="0"
+    style="width : 100%; height: 400px"></iframe>
+
+   <p>
+    <a href="table_span.html" target="menu1">다른 예제 보기</a>
+       <!-- 링크설정 : 페이지 이동, target 속성으로 보여질 곳 설정 -->
+       <!-- 예시 : target="blank"는 새로운 탭에서 열기. -->
+       <iframe src="" frameborder="0" name="menu1" style="width: 100%; height: 400px;"></iframe>
+       
+    </p> 
+    <p>
+    <!-- 다른 사이트에서 가져오기. youtube 공유, 퍼가기 하면 코드나오는데 그거 가져오기 -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YkEt1bbVH8c" 
+    title="YouTube video player" frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+     allowfullscreen></iframe>
+    </p>
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.411195973762!2d125.75630941513907!3d39.02874307955054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357e037e6bb723a7%3A0xea5fd658ac584d54!2z7Jil66WY6rSA!5e0!3m2!1sko!2skr!4v1630998676566!5m2!1sko!2skr"
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+
+    </div>
+</body>
+</html>

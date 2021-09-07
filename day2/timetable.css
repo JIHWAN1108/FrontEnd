@@ -1,0 +1,33 @@
+td{   /* 선택자 : td 태그. 모든 td태그에 적용한다 */
+    text-align: center;
+}
+table{
+   width: 40%;
+   /* 태그요소의 외부 여백 - 표 바깥 (위,아래,왼,오) */
+   margin-left: 20px;
+   border-collapse: collapse;   /* 테이블 칸(셀) 사이의 간격 없애기 */
+   /* 위의 2개 중에 하나 설정해서 사용한다. */
+   border: 3px solid black;
+}
+td,th{
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    
+}
+th{
+    color: rgba(44, 10, 231, 0.836);
+    background-color: white;
+}
+td{
+    
+}
+caption{
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+}
