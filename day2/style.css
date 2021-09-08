@@ -1,24 +1,25 @@
 td{   /* 선택자 : td 태그. 모든 td태그에 적용한다 */
-    border: 1px solid gray;
+    border: 1px solid black;
     text-align: center;
 }
 table{
-   width: 70%;
+   width: 50%;
    /* 태그요소의 외부 여백 - 표 바깥 (위,아래,왼,오) */
    margin-left: 30px;
    margin-right: 5px;
-   border-spacing: 10px;        /* 테이블 칸(셀) 사이의 간격 설정하기 */
+   /* border-spacing: 10px; */        /* 테이블 칸(셀) 사이의 간격 설정하기 */
    border-collapse: collapse;   /* 테이블 칸(셀) 사이의 간격 없애기 */
    /* 위의 2개 중에 하나 설정해서 사용한다. */
 }
 th{
    color: white;
-   background-color: rgb(13, 71, 109);
+   background-color: rgba(13, 127, 202, 0.836);
 }
 td,th{
    /* 태그요소의 내부여백 (위,아래,왼,오) */
    padding-top: 5px;
    padding-bottom: 5px;
+   width: 500px;
 }
 caption{ /* 글꼴 크기는 16px이 기본. 비율을 따질 때 %, em,  */
    font-size: 1.2em;
@@ -29,8 +30,13 @@ caption{ /* 글꼴 크기는 16px이 기본. 비율을 따질 때 %, em,  */
 .name{  /* .name은 class="name" 모두를 선택. EX) 캡션이나 이런데 CLASS 가 있으면 그쪽에도 반영됨. */
   /*   color: blue; */
 }
+th.name{
+    background-color: aquamarine;
+    color: black;
+    border: 1px solid black;
+}
 td.name{    /* td.name은 td태그 class="name" 모두를 선택. EX) td태그가 붙어있는 곳의 class 만 적용한다. */
-    color: powderblue;
+    color: rgba(51, 93, 99, 0.849);
 }
 /* 디자인 속성이 2개 적용된다면 더 작은 범위로 결과가 보인다. */
 
