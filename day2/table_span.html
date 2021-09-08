@@ -15,6 +15,9 @@
             text-align: center;
             width: 100px;
         }
+        .bgcolor{
+            background-color: yellow;
+        }
     </style>        <!-- td합치기(span) : 옆에있는 칸과 합치기 colspan(속성), 아래있는 칸과 합치기 rowspan(속성) -->
 </head>
 <body>
@@ -54,6 +57,29 @@
         <tr>
             <td>7</td>
             <td colspan="2">8</td>
+        </tr>
+    </table>
+    <!-- SELF STUDY : 바람개비 모양 만들어보기 -->
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2" class="bgcolor">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="bgcolor">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td rowspan="2" class="bgcolor">8</td>
+            <td colspan="2" class="bgcolor">9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
         </tr>
     </table>
 </body>

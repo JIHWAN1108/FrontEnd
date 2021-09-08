@@ -5,7 +5,7 @@ td{   /* 선택자 : td 태그. 모든 td태그에 적용한다 */
 table{
    width: 50%;
    /* 태그요소의 외부 여백 - 표 바깥 (위,아래,왼,오) */
-   margin-left: 30px;
+   margin-left: 20px;
    margin-right: 5px;
    /* border-spacing: 10px; */        /* 테이블 칸(셀) 사이의 간격 설정하기 */
    border-collapse: collapse;   /* 테이블 칸(셀) 사이의 간격 없애기 */
