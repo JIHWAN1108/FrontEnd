@@ -1,0 +1,34 @@
+td{
+    border: 1px solid black;
+     /* background-color: pink;
+    color: white;  */
+}
+
+
+/* 속성을 이용한 선택자(새로운 주제) */
+input, select{
+    /* 공통적으로 들어가는 것은 이렇게 해도 됨 */
+    padding: 7px;
+    border-radius: 4px;
+    background-color: rgb(240, 233, 233);
+}
+
+input[type=submit], input[type=reset]{     
+    cursor: pointer;
+     border: 3px solid coral; 
+}
+input[type=submit]:hover, input[type=reset]:hover{     /* 마우스가 올라갔을 때 text, pass, email 색깔 바뀌도록 */
+    background-color: rgb(121, 251, 255);
+}
+input[type=text], input[type=password], input[type=email]{  
+    width: 70%;
+}
+.color{
+    background-color: beige;
+    text-align: center;
+    width: 90px;
+}
+/* UI구현 시  레이아웃, 색상, 글꼴 고려!
+
+
+*/
