@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 예제 #3</title>
+</head>
+<body>
+  <h2>버튼을 이용하여 불을 끄고 켜기 TEST</h2>
+    <!-- 여기는 onclick을 버튼에 주었지만 아래 선생님과 한 거는 img에 줘서 img를 클릭해도 바뀔 수 있다. -->
+  <button onclick="document.getElementById('images').src='../images/pic_bulbon.gif'">
+    Turn on the light
+  </button>
+  
+  <img id="images" src="../images/pic_bulboff.gif" style="width: 100px">
+  <!-- 처음 실행했을 때 꺼져있게 설정한 것. -->
+  
+  <button onclick="document.getElementById('images').src='../images/pic_bulboff.gif'">
+    Turn off the light
+  </button>
+  
+  <!-- 위는 w3s에서 가져온 것 적용 / 아래는 함수와 변수 이용하여 버튼을 하나로 만들기 -->
+  <p>HTML 태그의 속성값 변경하기 : img 태그의 이미지 파일명을 지정하는 src 속성값을 변경하는 예제이다.(IMG ON/OFF)</p>
+  <p>HTML 태그의 style값 변경하기 : em 태그의 이미지 파일명을 지정하는 src 속성값을 변경하는 예제이다.(ON/OFF)</p>
+  <p>전구를 클릭하면 ON과 OFF를 할 수 있습니다. 현재 상태 : <b id="state" style="color: red; background-color: yellow; border: 2px solid black;">ON</b></p>
+  <!-- bulbOn(), bulbOff() 둘 다 함수 선언한 것. -->
+  <button onclick="bulbOn()">불 켜</button>
+  <img src="../images/pic_bulbon.gif" alt="light" style="width: 100px; cursor: pointer;" 
+        id="myimage" onclick="bulbToggle()">
+  <button onclick="bulbOff()">불 꺼</button>
+  <!-- BODY 안에 있는 것들 순서대로 실행된다. img 태그가 script 뒤에 있으면 오류 : 변수 호이스팅 때문에 onoff가 null됨! 주의!! -->
+
+  <script>
+    /* 전역변수가 하나 필요함. 지역변수는 실행되면 항상 그 값이기 때문. (1이면 on, 0이면 off) */
+    let state = 1;
+    const img =  document.getElementById('myimage');  // 태그 요소를 가져와 변수로 참조!! (const : 변경없을 때 like 상수)
+    const onoff = document.getElementById('state');   // 
+    function bulbToggle(){   // 이벤트 핸들러 : onlcick 이벤트 발생 시 실행되는 함수.
+        if(state==1){
+          bulbOff();
+          state=0;
+        }else{  // 현재 0이다.
+          bulbOn();
+          state=1;
+        }
+    }
+
+    function bulbOn(){
+      img.src='../images/pic_bulbon.gif';
+      onoff.style.color='red';
+      onoff.style.backgroundColor='yellow';
+      onoff.innerHTML='ON';  // 전구 ON됐을 때 ,STATE 'ON'으로 변경
+    }
+    function bulbOff(){
+      img.src='../images/pic_bulboff.gif';
+      onoff.style.color='white';
+      onoff.style.backgroundColor='gray';
+      onoff.innerHTML='OFF'; // 전구 OFF됐을 때 ,STATE 'OFF'으로 변경
+    }
+  </script>
+
+</body>
+</html>

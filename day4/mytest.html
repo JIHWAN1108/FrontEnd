@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mytest#1</title>
+    <!-- script 태그로 스크립트 작성할 수 있는 위치 1. -->
+</head>
+<body>
+    <!-- script 태그로 스크립트 작성할 수 있는 위치 2. -->
+    <!-- html 이벤트 리스너 속성에 작성할 수 있다. -->
+    <!-- JSP에서 사용하는 문서 객체 : document -->
+    <!-- JSP에서 사용하는 브라우저 객체 : window 로 현재 실행중인 브라우저를 제어한다--> <!-- 아래는 테스트해보기 -->
+
+    <!-- 스크립트는 html이벤트(사건) 속성에 작성할 수 있다. -->
+<!-- onclick 이벤트 속성값 "" 안에 자바스크립트 명령을 작성한다.(주의 : 따옴표가 겹칠 땐 종류를 바꿔 쓴다. + 큰, 작은따옴표 둘다 가능) -->
+    <h1>My First JavaScript TEST1</h1>
+    <button type = "button" onclick="document.getElementById('demo1').innerHTML=Date()">현재 날짜와 시간을 알려줄게요.</button>
+                <!-- Date는 함수 / type = button은 생략 가능하다! -->
+    <p id="demo1">innerHTML 위치이다. 이 자리에 날짜와 시간을 찍어주겠단 의미.</p>
+
+    <h2>What Can JavaScript Do? TEST2</h2>
+<p id="demo2">자바 스크립트는 HTML 콘텐츠를 변경할 수 있습니다.</p>
+<button onclick='document.getElementById("demo2").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<h2>What Can JavaScript Do? TEST3</h2>
+<p id="demo3">자바 스크립트는 HTML 스타일 (CSS)을 변경할 수 있습니다</p>
+<button onclick="document.getElementById('demo3').style.fontSize='35px'">Click Me!</button>
+
+<h2>What Can JavaScript Do? TEST4</h2>
+<p>자바 스크립트는 HTML 요소를 숨길 수 있습니다.</p>            <!-- 원래는 p 옆에 id ..쓰고 아래 지우기 -->
+<p id="demo4" style="display:block">Hello JavaScript!</p>    <!-- 이건 내가 추가한 것 -->
+<button onclick="document.getElementById('demo4').style.display='none'">Click Me!</button>
+
+<h2>What Can JavaScript Do? TEST5</h2>
+<p>자바 스크립트는 HTML 요소를 표시 할 수 있습니다.</p>
+<p id="demo5" style="display: none">Hello JavaScript!</p>
+<button onclick="document.getElementById('demo5').style.display='block'">Click Me!</button>
+</body>
+</html>
